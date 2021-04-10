@@ -107,14 +107,12 @@ h2 {
 .boton {
     background-color:#00669F;
     border-radius: 50%;
-    position: fixed;
-    right: 20px;
-    top: 335px;
-    width: 55px;
-}
-.boton a{
     color: white;
     font-size: 35px;
-    line-height: 55px; /*el mismo valor que el de su caja (selector .boton)*/
+    line-height: 55px;  /*el mismo valor que el del width para ser un círculo*/
+    position: fixed;
+    right: 20px;
     text-decoration: none;
+    top: 335px;
+    width: 55px;
 }
