@@ -8,3 +8,4 @@ Alumno: Bravo Pérez, Agustín Nicolás
 
 - [RecetaLemonPie](https://agusbrr.github.io/Frontend1-Proyectos/RecetaLemonPie/)
 - [BatmanCV](https://agusbrr.github.io/Frontend1-Proyectos/BatmanCV/)
+- [CartasSuperheroes](https://agusbrr.github.io/Frontend1-Proyectos/CartasSuperheroes/)
