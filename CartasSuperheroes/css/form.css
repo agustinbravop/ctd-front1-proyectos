@@ -1,0 +1,46 @@
+/*formulario (la clase la tiene el section)*/
+.formulario {
+    margin: 80px auto 20px;
+    width: 500px;
+}
+.formulario  p *{
+    border: 2px solid #000000;
+    font-family: 'Karla', sans-serif;
+    height: 40px;
+    margin-top: 20px;
+    width: 500px;
+}
+.formulario div *{
+    border-radius: 15px;
+    border: none;
+    font-family: 'Karla', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    margin-top: 40px;
+    width: 240px;
+}
+.formulario .reset{
+    background-color: #888888;
+    color: #ffffff;
+    margin-right: 10px;
+}
+.formulario .submit{
+    background-color: #1CD1B0;
+    color: #000000;
+}
+.formulario .submit-solo{
+    background-color: #1CD1B0;
+    color: #000000;
+    width: 500px; /*el doble de lo normal + 10px (teniendo en cuenta el margen entre los dos) porque no hay input type="reset"*/
+}
+.formulario textarea{
+    height: 200px;
+    word-wrap: break-word;
+}
+.tenes-cuenta{
+    color: #00669F;
+}
+.tenes-cuenta a{
+    text-decoration: none;
+}

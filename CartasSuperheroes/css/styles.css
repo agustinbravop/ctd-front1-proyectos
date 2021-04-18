@@ -1,0 +1,178 @@
+@import url("form.css");
+@import url("detail.css");
+
+* {
+    box-sizing: border-box;
+    color: #333333;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*partes distintas del body*/
+
+.descuento {
+    background-color: #1cd1b0;
+    color: #000000;
+    padding-left: 20px;
+}
+header{
+    background-color: #00669F;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    height: 84px;
+    position: sticky;
+    top: 0px;
+    z-index: 6;
+}
+.nav {
+    background-color: #001D2D;
+    padding: 10px 0px;
+    text-align: right;
+}
+.nav a{
+    color: white;
+    font-weight: 400;
+    margin-right: 20px;
+    text-decoration: none;
+}
+main {
+    min-height: 85vh;
+    text-align: center;
+}
+footer {
+    background-color: #00669F;
+    height: 70px;
+    padding: 25px 0px;
+    text-align: center;
+}
+footer p{
+    color: white;
+    font-weight: normal;
+}
+
+/*títulos y subtítulos*/
+header img{
+    display: inline-block;
+    height: 84px;
+    vertical-align: middle;  
+}
+h1 {
+    color: white;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 84px; 
+    margin-left: 15px;    
+    vertical-align: middle;     
+}
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 56px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+h3 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+h4 {
+    color: #2C0187;
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+/*cartas en general*/
+.conjunto-cartas{
+    margin: 80px 0px;
+}
+.carta{
+    display: inline-block;
+    margin: 30px;
+    vertical-align: middle;
+    width: 325px;
+}
+
+/*imágenes de las cartas*/
+.carta-imagenes {
+    background-size: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 200px;
+    position: relative;
+    z-index: 2;
+}
+.bg-batman{
+    background-image: url("../img/bg-batman.jpg");
+}
+.bg-ww {
+    background-image: url("../img/bg-ww.jpg");
+}
+.bg-sman {
+    background-image: url("../img/bg-sman.jpg");
+}
+.bg-harleyq{
+    background-image: url("../img/bg-harleyq.jpg");
+}
+.big-bg-harleyq{
+    background-image: url("../img/big-bg-harleyq.jpg");
+    background-size: cover;
+}
+.foto-de-perfil {
+    border-radius: 50%;
+    bottom: -120px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 150px;
+    position: relative;
+    width: 150px;
+}
+.fa-heart{  /*es el corazoncito, cortesía de Font Awesome*/
+    color: #cc2424;
+    font-size: 30px;
+    left: 25px;
+    position: absolute;
+    top: 20px;
+}
+
+/*textos de las cartas*/
+.carta-textos {
+    background-color: #f3f3f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 350px;
+    padding-top: 75px;
+    position: relative;
+}
+.carta-textos p{
+    color: #333333;
+    margin: 0px 25px 0px;
+    text-align: left;
+}
+.ver-mas{ /*¿qué nombre le pondría? no me gusta nombrarlo según su contenido, es el botón que dice "ver más"*/
+    background-color: #00669F;
+    border-radius: 5px;
+    bottom: 20px;
+    color: white;
+    left: 92.5px; /*(325/2) - (140/2) para estar centrada*/
+    line-height: 20px;
+    padding: 15px 0px;
+    position: absolute;
+    text-decoration: none;
+    width: 140px;
+}
+
+/*
+botón fijo, que fue hecho en la clase 7 y abandonado en la clase 9
+.boton {
+    background-color:#00669F;
+    border-radius: 50%;
+    color: white;
+    font-size: 35px;
+    line-height: 55px;  el mismo valor que el del width para ser un círculo
+    position: fixed;
+    right: 20px;
+    text-decoration: none;
+    top: 335px;
+    width: 55px;
+}
+*/

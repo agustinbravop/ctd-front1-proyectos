@@ -1,0 +1,59 @@
+/*detalles*/
+.detail-h1{
+    font-size: 64px;
+    line-height: 120px;
+}
+.detail-header{
+    height: 120px;
+}
+
+.detail {
+    background-color: #f3f3f3;
+    border-radius: 50px 50px 0px 0px; /*izq-sup, der-sup, der-inf, izq-inf*/
+    display: inline-block;
+    height: 400px;
+    margin-top: 200px;
+    padding-top: 75px;
+    position: relative;
+    width: 550px;
+}
+.detail-foto-de-perfil {
+    border-radius: 50%;
+    left: 200px; /*(550/2) - (150/2)*/
+    position: absolute;
+    top: -95px;
+    width: 150px;
+}
+.detail-heart{
+    left: 30px;
+    position: absolute;
+    top: 40px;
+}
+.detail p{
+    font-size: 18px;
+    margin: 0px 25px;
+    text-align: left;
+}
+.span-color{
+    color: #2C0187;
+}
+.span-color-style{
+    color: #2C0187;
+    font-style: italic;
+}
+.detail img{ /*el bate, gun y bazooka*/
+    margin:10px;
+}
+.volver-al-home{
+    background-color: #2C0187;
+    border-radius: 0px 0px 50px 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0px auto 150px;
+    padding: 35px 0px;
+    width: 550px;
+}
+.volver-al-home a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
