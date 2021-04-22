@@ -161,18 +161,19 @@ h4 {
     width: 140px;
 }
 
-/*
-botón fijo, que fue hecho en la clase 7 y abandonado en la clase 9
-.boton {
+.boton-agregar {
     background-color:#00669F;
     border-radius: 50%;
     color: white;
     font-size: 35px;
-    line-height: 55px;  el mismo valor que el del width para ser un círculo
+    line-height: 55px;  /*el mismo valor que el del width para ser un círculo*/
     position: fixed;
     right: 20px;
     text-decoration: none;
     top: 335px;
     width: 55px;
 }
-*/
+.boton-agregar:hover{
+    background-color: #001D2D;
+}
+

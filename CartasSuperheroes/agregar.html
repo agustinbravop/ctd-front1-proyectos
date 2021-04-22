@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='UTF-8'>
+    <title>Cartas de Superhéroes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='css/styles.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Karla:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"/>
+</head>
+<body>
+    <p class="descuento">20% de descuento en todos los productos!</p>
+    <header>
+        <a href="index.html"><img src="img/Group.png" alt="icono tienda"></a>
+        <h1>Card Super Heroes</h1>
+    </header>
+    <nav class="nav">
+        <a href="contacto.html">Contacto</a><a href="registro.html">Registrarme</a><a href="login.html">Ingresar</a>
+    </nav>
+    <main>
+        <div class="agregar">
+            <h3>Añadí tu super!</h3>
+            <p>Agregá tu personaje favorito completando las opciones.</p>
+            <form action="#" method="POST" class="agregar-formulario">
+                <div class="form-pequeño">
+                    <label class="agregar-label" for="nombre">*Nombre</label>
+                    <input class="agregar-input" type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-pequeño">
+                    <label class="agregar-label" for="fecha">Fecha</label>
+                    <input class="agregar-input" type="date" id="fecha" name="fecha">
+                </div>
+                <textarea class="agregar-textarea" name="descripcion" cols="55" rows="5" placeholder=" Descripción"></textarea>
+                <div class="form-pequeño">
+                    <label class="agregar-label" for="especie">*Especie</label>
+                    <select class="agregar-select" name="especie" id="especie" required>
+                        <option value="" disabled selected hidden>Especie</option>
+                        <option value="humano">Humano</option>
+                        <option value="alien">Alien</option>
+                        <option value="kryptoniano">Kriptoniano</option>
+                        <option value="amazona">Amazona</option>
+                    </select>
+                </div>
+                <div class="form-pequeño">
+                    <label class="agregar-label" for="foto">Agregar Foto</label>
+                    <label for="foto" class="agregar-foto">Selecionar archivo</label>
+                    <input type="file" accept=".jpg, .png, .pdf" id="foto" class="agregar-foto-input">
+                    
+                 </div>
+                <fieldset class="agregar-checkbox">
+                    <legend class="agregar-legend">Poderes</legend>
+                    
+                    <label for="volar" class="container-check">
+                        <input type="checkbox" id="volar" value="volar" name="poderes">
+                        <span class="checkmark"></span>
+                        Volar
+                    </label>
+                    
+                    <label for="superinteligencia" class="container-check">
+                        <input type="checkbox" id="superinteligencia" value="superinteligencia" name="poderes">
+                        <span class="checkmark"></span>
+                        SuperInteligencia
+                    </label>
+                    
+                    <label for="vista-rayo-laser" class="container-check">
+                        <input type="checkbox" id="vista-rayo-laser" value="vista-rayo-laser" name="poderes">
+                        <span class="checkmark"></span>
+                        Vista de rayo láser
+                    </label>
+                   
+                    <label for="billeteragorda" class="container-check">
+                        <input type="checkbox" id="billeteragorda" value="billeteragorda" name="poderes">
+                        <span class="checkmark"></span>
+                        Billetera gorda
+                    </label>
+                </fieldset>
+                <hr>
+                <fieldset class="agregar-radio">
+                    <legend class="agregar-legend">Tipo de personaje</legend>
+                    
+                    <label class="container-radio agregar-label" for="heroe">
+                        <input type="radio" id="heroe" name="heroe" value="heroe">
+                        <span class="radiomark"></span>
+                        Héroe / Heroina
+                    </label>
+                    <label class="container-radio agregar-label" for="villano">
+                        <input type="radio" id="villano" name="heroe" value="villano">
+                        <span class="radiomark"></span>
+                        Villano / Villana
+                    </label> 
+                </fieldset>
+                <input class="agregar-submit" type="submit" value="Añadir">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados a AGUSTÍN NICOLÁS BRAVO PÉREZ</p>
+    </footer>
+</body>
+</html>
