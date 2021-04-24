@@ -12,13 +12,13 @@
 }
 .botones *{
     border-radius: 15px;
+    border: none;
     font-family: 'Karla', sans-serif;
     font-size: 20px;
     font-weight: bold;
     height: 40px;
     margin-top: 40px;
     width: 240px;
-    border: none;
 }
 .reset{
     background-color: #888888;
@@ -45,14 +45,14 @@
     text-decoration: none;
 }
 
-/* !!!!!!!------para el agregar.html (clase 10)------!!!!!!!!*/
+/* !!!!!!!------form para el agregar.html (clase 10)------!!!!!!!!*/
 
 .agregar{
     background-color: #00669F;
     border-radius: 40px;
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.3);
     color: white;
-    margin: 50px auto 20px;
+    margin: 50px auto 50px;
     width: 860px;
 }
 .agregar h3{
@@ -66,106 +66,112 @@
     font-family: 'Inter', sans-serif;
     font-weight: 300;
 }
-.agregar-formulario{
-    column-count: 2;
-    column-gap: 5px;
+.agregar form{
+    column-count: 2; /*usé una distribución de columnas*/
+    column-gap: 25px;
     margin-top: 20px;
     padding: 0px 90px;
     text-align: left;
 }
-.form-pequeño{ /*solo sirve para explicitar una altura del conjunto de label + input de nombre, fecha, agregar foto y especie (para que sean igual de altos)*/
+.agregar div{ /*solo sirve para explicitar una altura del conjunto de label + input de nombre, fecha, agregar foto y especie (para que sean igual de altos)*/
     height: 120px;
 }
-.agregar-label { /*general para los estilos de la mayoría de labels*/
+.agregar label, .agregar legend{ /*general para los estilos de la mayoría de labels*/
     color: white;
     display: block;
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     font-weight: 300;
 }
-.agregar-legend{ /*general para las dos legends de los dos fieldsets*/
-    color: white;
-    display: block;
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 10px;
-}
-/*---input en general(afecta a nombre, fecha y especie)---*/
-.agregar-input {
+.agregar input, .agregar textarea, .agregar select{
     border-radius: 12px;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid #dddddd;
     color: #000000;
+    outline: none;
+    width: 100%;
+}
+/*---input en general(afecta sólo a nombre y fecha)---*/
+.agregar-input {
     font-family: 'Karla', sans-serif;
     font-size: 20px;
     font-weight: 300;
     height: 60px;
     margin: 10px 0px;
-    width: 90%;
+    padding: 5px;
 }
+input:required:not(:focus):valid{ 
+    border: 2px solid green;
+}
+select:required:not(:focus):valid{ 
+    border: 2px solid green;
+}
+input:required:not(:empty):not(:focus):invalid{ /*no surge porque el formulario es muy básico, no hay forma de conseguir inputs inválidos*/
+    border: 2px solid red;
+}
+input:focus{
+    background-color: #AFF9FE;
+}
+.requerido::before{ /*no encontré forma de hacer que dinámicamente desaparezca al ser completado el campo*/
+    content: "*";
+}
+
 /* --- input textarea (descripción) ---*/
-.agregar-textarea{
-    border-radius: 12px;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    font-size: 20px;
+.agregar textarea{
+    font-size: 16px;
     height: 300px;
-    line-height: 48px;
     margin-top: 20px;
+    padding: 10px;
     resize: none;
-    width: 90%;
+}
+.agregar textarea::placeholder{ /*sólo afecta al placeholder*/
+    font-size: 20px;
 }
 /* --- input select (especie) --- */
-.agregar-select{
-    border-radius: 12px;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+.agregar select{
     font-size: 20px;
     height: 60px;
     line-height: 48px;
     margin: 10px 0px;
-    width: 90%;
+    padding: 5px;
 }
-select:required:invalid{ /*hace clarito al "placeholder" especie*/
+.agregar select:required:invalid{ /*hace clarito al "placeholder" de especie*/
     color: rgba(0, 0, 0, 0.5);
 }
 /* --- input file (agregar foto) ---*/
-.agregar-foto {
+
+.agregar input[type="file"]{
+    border-radius: 0px;
+    border: none;
+    height: 30px;
+    margin-top: 25px;
+}
+.agregar input[type="file"]::-webkit-file-upload-button{ /*el pseudoelemento aplica estilos al botón gris de "Choose File"*/
     background-color: #CECECE;
     border-radius: 5px;
-    font-family: 'Karla', sans-serif;
-    font-size: 16px;
+    border: none;
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
-    height: 90px;
-    line-height: 80px;
-    margin: 25px 0px;
-    padding: 5px 50px 5px 10px;
-    width: 80px;
+    height: 30px;
+    line-height: 20px;
+    text-align: left;
+    width: 200px;
 }
-.agregar-foto:hover{
+.agregar input[type="file"]::-webkit-file-upload-button:hover{
     background-color: #ACACAC;
 }
-.agregar-foto-input{
-    clip-path: inset(0px 0px 0px 90px); /*vuelve invisible parte (90px desde la izquierda) del elemento (choose file/input type="file") -- no me gusta pero me rendí, es la que encontré que funciona sin JS*/
-    color: #000000;
-    left: 112px;
-    overflow: hidden;
-    position: relative;
-    top: -51px;
-}
 /* --- input checkbox (poderes) ---*/
-.agregar-checkbox{
+.agregar fieldset{
     border: none;
     margin-top: 20px;
     text-align: left;
 }
-.agregar-checkbox input{
-    border: 1px solid #C4C4C4;
-    height: 20px;
-    width: 20px;
+.agregar fieldset legend{
+    margin-bottom: 10px;
 }
+
 /*googleé como hacer checkmarks personalizados en w3schools(cambiar fondo, tamaño, hover, etc)*/
-.container-check{
-    color: #ffffff;
-    display: block;
+.agregar fieldset label.container-check{ /*el "label" va sólo para ganar la prioridad*/
     font-family: 'Karla', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -174,39 +180,40 @@ select:required:invalid{ /*hace clarito al "placeholder" especie*/
     position: relative;
     width: 85%;
 }
-.container-check input{ /*desaparecen los checkmarks originales*/
+.agregar fieldset input[type="checkbox"]{ /*desaparecen los checkmarks originales*/
     height: 0;
     opacity: 0;
     width: 0;
 }
-.checkmark {
+.agregar .checkmark { /*es el checkmark nuevo customizado*/
     background-color: #eeeeee;
     border-radius: 5px;
-    border: 2px solid #c4c4c4;
+    border: 1px solid #c4c4c4;
     height: 20px;
     left: 0;
     position: absolute;
     top: 0;
     width: 24px;
 }
-.container-check:hover input ~ .checkmark { /*cuando tengo el mouse encima*/
+.agregar .container-check:hover input ~ .checkmark { /*cuando tengo el mouse encima*/
     background-color: #ccc;
   }
-.container-check input:checked ~ .checkmark { /*cuando lo selecciono*/
+.agregar .container-check input:checked ~ .checkmark { /*cuando lo selecciono*/
     background-color: #34CEFF;
 }
-.checkmark:after {
+.agregar .checkmark:after {
     content: "";
     display: none;
     position: absolute;
 }
-.container-check input:checked ~ .checkmark:after {
+.agregar .container-check input:checked ~ .checkmark:after {
     display: block;
 }
-.container-check .checkmark:after { /*esto me arma el tick blanco*/
-    left: 6px;
-    -ms-transform: rotate(45deg);     /*compatible con IE*/
-    -webkit-transform: rotate(45deg);     /*solo para compatibilidad (Chrome, Opera 12, Safari 3)*/
+.agregar .container-check .checkmark:after { /*esto me arma el tick blanco*/
+    -ms-transform: rotate(45deg); /*compatible con IE*/
+    -webkit-transform: rotate(45deg); /*solo para compatibilidad (Chrome, Opera 12, Safari 3)*/
+    left: 7px;
+    top: 1px;
     border: solid white; /*por algún motivo, si border va DESPUÉS de border-width (contrario al orden alfabetico) se "duplica" y el tick se vuelve un rectangulo (como si el tick se duplicara complementariamente*/
     border-width: 0 3px 3px 0;
     height: 10px;
@@ -214,39 +221,27 @@ select:required:invalid{ /*hace clarito al "placeholder" especie*/
     width: 5px;
 }
 
-hr{
+.agregar hr{
     margin: 20px 0px;
 }
 /* --- input radio (tipo de personaje) --- */
-.agregar-radio{
-    border: none;
-    margin-top: 15px;
-    text-align: left;
-}
-.agregar-radio label{
+
+/*googleé como hacer checkmarks (para radio le puse radiomark) personalizados en w3schools(cambiar fondo, tamaño, hover, etc)*/
+.agregar .container-radio{
     display: inline-block;
     font-family: 'Karla', sans-serif;
-    font-weight: 400;
-    margin: 5px 0px;
-    width: 85%;
-}
-/*googleé como hacer checkmarks (para radio le puse radiomark) personalizados en w3schools(cambiar fondo, tamaño, hover, etc)*/
-.container-radio{
-    display: block;
-    font-family: 'Karla', sans-serif;
-    font-size: 20px;
     font-weight: 400;
     margin: 5px 0px;
     padding-left: 30px;
     position: relative;
     width: 85%;
 }
-.container-radio input {
+.agregar .container-radio input {
     height: 0;
     opacity: 0;
     width: 0;
 }
-.radiomark {
+.agregar .radiomark {
     background-color: #ffffff;
     border-radius: 50%;
     border: 1px solid #c4c4c4;
@@ -256,18 +251,17 @@ hr{
     top: 0;
     width: 20px;
 }
-.container-radio:hover input ~ .radiomark {
+.agregar .container-radio:hover input ~ .radiomark {
     background-color: #ccc;
 }
-.container-radio input:checked ~ .radiomark {
+.agregar .container-radio input:checked ~ .radiomark {
     background-color: #ffffff;
     border: 2px solid #34ceff;
 }
-
-.container-radio input:checked ~ .radiomark:after {
+.agregar .container-radio input:checked ~ .radiomark:after {
     display: block;
 }
-.container-radio .radiomark:after {
+.agregar .container-radio .radiomark:after {
     background: #34CEFF;
     border-radius: 50%;
     content: "";
@@ -280,11 +274,10 @@ hr{
 }
 
 /*---botón que dice añadir---*/
-.agregar-submit{
+.agregar input[type="submit"]{
     background-color: #1CD1B0;
     border-radius: 20px;
     border: none;
-    color: #000000;
     column-span: all;
     display: block;
     font-family: 'Inter', sans-serif;
@@ -295,9 +288,12 @@ hr{
     position: relative;
     width: 400px;
 }
-.agregar-submit:hover{
+.agregar input[type="submit"]:hover{
     background-color: #001D2D;
     color: #ffffff;
+    height: 94px;
+    margin: 35px auto 15px;
+    width: 460px;
 }
 
 /*-----------------*/

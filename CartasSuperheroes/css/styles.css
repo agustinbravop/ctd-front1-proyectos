@@ -42,7 +42,7 @@ main {
 footer {
     background-color: #00669F;
     height: 70px;
-    padding: 25px 0px;
+    line-height: 70px;
     text-align: center;
 }
 footer p{
@@ -92,13 +92,30 @@ h4 {
     margin: 30px;
     vertical-align: middle;
     width: 325px;
+    height: 550px;
+}
+/*la carta se agranda cuando le paso el cursor por encima*/
+.carta:hover{
+    width: 345px;
+    height: 580px;
+    margin: 15px 20px; /*y-axis la mitad porque hay 2, x-axis entero porque solo hay un margen entre ellos*/
+}
+.carta:hover .carta-imagenes{
+    height: 210px;
+}
+.carta:hover .foto-de-perfil{
+    width: 165px;
+    height: 165px;
+}
+.carta:hover .carta-textos{
+    height: 380px;
 }
 
 /*imágenes de las cartas*/
 .carta-imagenes {
     background-size: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
     height: 200px;
     position: relative;
     z-index: 2;
@@ -165,13 +182,14 @@ h4 {
     background-color:#00669F;
     border-radius: 50%;
     color: white;
-    font-size: 35px;
-    line-height: 55px;  /*el mismo valor que el del width para ser un círculo*/
+    font-size: 56px;
+    line-height: 75px;  /*el mismo valor que el del width para ser un círculo*/
     position: fixed;
     right: 20px;
     text-decoration: none;
-    top: 335px;
-    width: 55px;
+    top: 50%;
+    width: 75px;
+    height: 75px;
 }
 .boton-agregar:hover{
     background-color: #001D2D;
