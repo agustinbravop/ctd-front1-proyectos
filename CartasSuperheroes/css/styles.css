@@ -97,8 +97,8 @@ h4 {
 /*la carta se agranda cuando le paso el cursor por encima*/
 .carta:hover{
     width: 345px;
-    height: 580px;
-    margin: 15px 20px; /*y-axis la mitad porque hay 2, x-axis entero porque solo hay un margen entre ellos*/
+    height: 585px;
+    margin: 12.5px 20px; /*y-axis la mitad porque hay 2 (menos 10px que son los de carta-imagenes, que no cuentan para el margen inferior), x-axis entero porque solo hay un margen entre ellos*/
 }
 .carta:hover .carta-imagenes{
     height: 210px;
@@ -108,9 +108,14 @@ h4 {
     height: 165px;
 }
 .carta:hover .carta-textos{
-    height: 380px;
+    height: 375px;
 }
-
+.carta:hover .ver-mas{
+    bottom: 25px;
+    left: 97.5px;
+    padding: 20px 0px;
+    width: 150px;
+}
 /*imágenes de las cartas*/
 .carta-imagenes {
     background-size: 100%;
@@ -168,10 +173,9 @@ h4 {
 .ver-mas{ /*¿qué nombre le pondría? no me gusta nombrarlo según su contenido, es el botón que dice "ver más"*/
     background-color: #00669F;
     border-radius: 5px;
-    bottom: 20px;
+    bottom: 15px;
     color: white;
     left: 92.5px; /*(325/2) - (140/2) para estar centrada*/
-    line-height: 20px;
     padding: 15px 0px;
     position: absolute;
     text-decoration: none;
@@ -183,13 +187,14 @@ h4 {
     border-radius: 50%;
     color: white;
     font-size: 56px;
+    height: 75px;
     line-height: 75px;  /*el mismo valor que el del width para ser un círculo*/
     position: fixed;
     right: 20px;
     text-decoration: none;
     top: 50%;
     width: 75px;
-    height: 75px;
+    z-index: 3;
 }
 .boton-agregar:hover{
     background-color: #001D2D;
