@@ -83,22 +83,23 @@
     font-size: 20px;
     font-weight: 300;
 }
+/*---input en general---*/
 .agregar input, .agregar textarea, .agregar select{
     border-radius: 12px;
     border: 2px solid #dddddd;
     color: #000000;
     outline: none;
     width: 100%;
-}
-/*---input en general(afecta sólo a nombre y fecha)---*/
-.agregar-input {
-    font-family: 'Karla', sans-serif;
     font-size: 20px;
-    font-weight: 300;
     height: 60px;
+    line-height: 48px;
     margin: 10px 0px;
     padding: 5px;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
 }
+
+/*---funcionalidad de input válido, inválido, etc---*/
 input:required:not(:focus):valid{ 
     border: 2px solid green;
 }
@@ -118,7 +119,7 @@ input:focus{
 /* --- input textarea (descripción) ---*/
 .agregar textarea{
     font-size: 16px;
-    height: 300px;
+    height: 325px;
     margin-top: 20px;
     padding: 10px;
     resize: none;
@@ -142,20 +143,18 @@ input:focus{
 .agregar input[type="file"]{
     border-radius: 0px;
     border: none;
-    height: 30px;
+    line-height: 0px;
     margin-top: 25px;
+    font-size: 16px;
+    padding: 0px;
 }
 .agregar input[type="file"]::-webkit-file-upload-button{ /*el pseudoelemento aplica estilos al botón gris de "Choose File"*/
     background-color: #CECECE;
     border-radius: 5px;
     border: none;
-    display: inline-block;
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
     height: 30px;
-    line-height: 20px;
     text-align: left;
-    width: 200px;
+    width: 60%;
 }
 .agregar input[type="file"]::-webkit-file-upload-button:hover{
     background-color: #ACACAC;
@@ -192,7 +191,6 @@ input:focus{
     height: 20px;
     left: 0;
     position: absolute;
-    top: 0;
     width: 24px;
 }
 .agregar .container-check:hover input ~ .checkmark { /*cuando tengo el mouse encima*/
@@ -215,7 +213,7 @@ input:focus{
     left: 7px;
     top: 1px;
     border: solid white; /*por algún motivo, si border va DESPUÉS de border-width (contrario al orden alfabetico) se "duplica" y el tick se vuelve un rectangulo (como si el tick se duplicara complementariamente*/
-    border-width: 0 3px 3px 0;
+    border-width: 0px 3px 3px 0px;
     height: 10px;
     transform: rotate(45deg);
     width: 5px;
@@ -278,22 +276,22 @@ input:focus{
     background-color: #1CD1B0;
     border-radius: 20px;
     border: none;
-    column-span: all;
+    column-span: all;/*para que ocupe todas las columnas en vez de solo 1*/
     display: block;
-    font-family: 'Inter', sans-serif;
     font-size: 40px;
     font-weight: 700;
     height: 84px;
-    margin: 40px auto 20px;
-    position: relative;
-    width: 400px;
+    margin: 25px auto 20px;
+    position: relative; /*si no lo uso es como que el botón no tiene margen pero lo que vemos sí (el fondo verde y "añadir")*/
+    width: 60%;
 }
 .agregar input[type="submit"]:hover{
     background-color: #001D2D;
     color: #ffffff;
     height: 94px;
-    margin: 35px auto 15px;
-    width: 460px;
+    cursor: pointer; 
+    width: 65%;
+    margin: 20px auto 15px;
 }
 
 /*-----------------*/
