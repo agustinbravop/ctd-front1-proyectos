@@ -284,12 +284,12 @@ input:focus{
     margin: 25px auto 20px;
     position: relative; /*si no lo uso es como que el botón no tiene margen pero lo que vemos sí (el fondo verde y "añadir")*/
     width: 60%;
+    cursor: pointer;
 }
 .agregar input[type="submit"]:hover{
     background-color: #001D2D;
     color: #ffffff;
     height: 94px;
-    cursor: pointer; 
     width: 65%;
     margin: 20px auto 15px;
 }
