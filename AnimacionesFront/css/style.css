@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #f2f2f2;
+  --decoration-color: #c79800;
+}
+
+body {
+  background: var(--secondary-color);
+  font-family: 'Roboto';
+  color: var(--primary-color);
+ 
+}
+
+header {
+  background-color: var(--primary-color);
+  z-index: 100;
+  text-align: center;
+}
+
+header .logo {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* Menú principal */
+nav ul {
+  display: flex;   
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0px;
+  margin-left: 10px;
+}
+
+nav ul li {
+  margin: 20px;
+}
+
+nav ul li a {
+  position: relative;
+  margin: 15px;
+  font-size: 25px;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/************ 
+Animación debajo de enlaces 
+********/
+nav ul li a::before{
+  content:'';
+  background: var(--decoration-color);
+  position:absolute;
+  bottom:-10px; 
+  width: 0px;
+  height: 5px;
+  transition: all 500ms;
+}
+nav ul li a:hover::before{ /*animación del nav!*/
+  width: 100%;
+}
+
+/* Barra redes */
+.social {
+  position: fixed;
+  left: 0;
+  top: calc(50% - 90px);
+  /* Para que quede centrada le decimos que al 50% del alto le reste la mitad del alto de la barra: 16px de la letra + 10 padding-top + 10padding-bottom */
+  z-index: 2000;
+}
+
+.social ul {
+  list-style: none;
+}
+
+.social ul li a {
+  display: inline-block;
+  /* porque le quiero agregar padding */
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: all 500ms;
+}
+
+.social ul li a:hover{ /*animación de las redes sociales!*/
+  padding: 10px 30px;
+  background-color: #000000;
+}
+
+.social ul li .icon-facebook {
+  background: #3b5998;
+}
+
+/* Establecemos los colores de cada red social, aprovechando su class */
+.social ul li .icon-twitter {
+  background: #00abf0;
+}
+
+.social ul li .icon-instagram {
+  background: #E4405F;
+}
+
+.social ul li .icon-whatsapp {
+  background: #25D366;
+}
+
+.social ul li .icon-mail {
+  background: #666666;
+}
+
+/*********** 
+ 
+ **********/
+/* Contenido */
+.container {
+  width: 80%;
+  margin: 5% auto;
+}
+
+.container p {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.container a {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.container a:hover {
+  color: var(--decoration-color);
+}
+
+/* HAcemos girar a spinner */
+.spinner {
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  border-radius: 50%;
+  z-index: 2;
+  background-color: transparent;
+  border-top: 10px solid rgb(188, 202, 66);
+  border-right: 10px solid rgb(66, 139, 202);
+  border-bottom: 10px solid rgb(202, 66, 129);
+  border-left: 10px solid rgba(66, 139, 202, .2);
+  animation: spinner 1s infinite linear; /*animación del spinner!*/
+/* animation: nombre duración repetición que vaya a la misma velocidad */
+}
+
+/*---------------keyframes mío-------------*/
+@keyframes spinner {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/*
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #c79800;
+  animation: color 2s infinite;
+  /*transition: transform 2s, background-color 3s ;
+  -webkit-transition: transform 2s, background-color 3s ;
+  -moz-transition: transform 2s, background-color 3s ;
+  -ms-transition: transform 2s, background-color 3s ;
+  -o-transition: transform 2s, background-color 3s ;
+  
+  -webkit-animation: color 4s  infinite alternate;
+}
+*/
+/*
+.box:hover{
+  transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  background-color: aqua;
+}*/
+@keyframes color {
+  0% {
+    background-color: red;
+  } 
+  50%{
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
