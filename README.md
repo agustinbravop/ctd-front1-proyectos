@@ -9,4 +9,8 @@ Alumno: Bravo Pérez, Agustín Nicolás
 - :cake:[RecetaLemonPie](https://agusbrr.github.io/Frontend1-Proyectos/RecetaLemonPie/)
 - :bat:[BatmanCV](https://agusbrr.github.io/Frontend1-Proyectos/BatmanCV/)
 - :superhero:[CartasSuperheroes](https://agusbrr.github.io/Frontend1-Proyectos/CartasSuperheroes/)
-- :clapper:[AnimacionesFront](https://agusbrr.github.io/Frontend1-Proyectos/AnimacionesFront/)
+
+## Links a los ejercicios: 
+- :clapper:[Animaciones](https://agusbrr.github.io/Frontend1-Proyectos/EjericioAnimaciones/)
+- :mobile_phone_off:[MediaQueries](https://agusbrr.github.io/Frontend1-Proyectos/EjericioMediaQueries/)
+- :left_right_arrow:[Flex](https:agusbrr.github.io/Frontend1-Proyectos/EjercicioFlex/)
