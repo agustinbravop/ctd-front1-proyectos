@@ -1,8 +1,10 @@
 ## Certified Tech Developer - Front End 1 - Camada 3:
 
-Profesores: Gabriela Mancini - Jonathan González
+Inicio de cursada: Marzo 2021.
 
-Alumno: Bravo Pérez, Agustín Nicolás
+Profesores: Gabriela Mancini - Jonathan González.
+
+Alumno: Bravo Pérez, Agustín Nicolás.
 
 ## Links a los proyectos:
 
