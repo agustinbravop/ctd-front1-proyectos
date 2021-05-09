@@ -13,6 +13,6 @@ Alumno: Bravo Pérez, Agustín Nicolás.
 - :superhero:[CartasSuperheroes](https://agusbrr.github.io/Frontend1-Proyectos/CartasSuperheroes/)
 
 ## Links a los ejercicios: 
-- :clapper:[Animaciones](https://agusbrr.github.io/Frontend1-Proyectos/EjericioAnimaciones/)
-- :mobile_phone_off:[MediaQueries](https://agusbrr.github.io/Frontend1-Proyectos/EjericioMediaQueries/)
-- :left_right_arrow:[Flex](https:agusbrr.github.io/Frontend1-Proyectos/EjercicioFlex/)
+- :clapper:[Animaciones](https://agusbrr.github.io/Frontend1-Proyectos/EjercicioAnimaciones/)
+- :mobile_phone_off:[MediaQueries](https://agusbrr.github.io/Frontend1-Proyectos/EjercicioMediaQueries/)
+- :left_right_arrow:[Flex](https://agusbrr.github.io/Frontend1-Proyectos/EjercicioFlex/)
