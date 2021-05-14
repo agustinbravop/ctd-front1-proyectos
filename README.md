@@ -15,4 +15,4 @@ Alumno: Bravo Pérez, Agustín Nicolás.
 ## Links a los ejercicios: 
 - :clapper:[Animaciones](https://agusbrr.github.io/Frontend1-Proyectos/EjercicioAnimaciones/)
 - :mobile_phone_off:[MediaQueries](https://agusbrr.github.io/Frontend1-Proyectos/EjercicioMediaQueries/)
-- :left_right_arrow:[Flex](https://agusbrr.github.io/Frontend1-Proyectos/EjercicioFlex/)
+- :left_right_arrow:[Flexbox](https://agusbrr.github.io/Frontend1-Proyectos/EjercicioFlex/)

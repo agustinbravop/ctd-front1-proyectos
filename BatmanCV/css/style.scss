@@ -1,0 +1,65 @@
+@import "variables";
+
+header{
+    background-color: #dddddd;
+    text-align: center;
+}
+h1{
+    background-color: $colorFondo;
+    color: $colorPrincipal;
+    font-family: "New Times Roman", serif;
+    font-size: 150%;
+    font-weight: bold;
+    letter-spacing: 10px;
+    line-height: 200%;
+    word-spacing: 50px;
+}
+main{
+    margin: auto 25%;
+    h2{
+        background-color: $colorFondo;
+        color: rgb(114, 30, 30);
+        font-size: 18px;
+        letter-spacing: 10px;
+        line-height: 120%;
+    }
+}
+footer{
+    background-color: #1f497d;
+    color: #dddddd;
+    font-family: $fontFamilyPrincipal;
+    font-size: 24px;
+    line-height: 160%;
+    text-align: center;
+}
+.font-listas{
+    font-family: $fontFamilyPrincipal;
+    font-size: 90%;
+    line-height: 130%;
+}
+.red-social{
+    width: 1.5%;
+}
+.negrita-italica{
+    font-style: italic;
+    font-weight: bold;
+}
+.letra-mas-grande{
+    font-size: 115%;
+}
+.conector{
+    font-size: 20px;
+    position: absolute;
+    top: 10%;
+    &-derecha{
+    left: 80%;
+    @extend .conector;
+    }
+    &-izquierda{
+    right: 80%;
+    @extend .conector;
+    }
+}
+.foto-perfil{
+    max-width: 100px;
+}
